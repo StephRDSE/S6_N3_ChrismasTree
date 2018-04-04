@@ -1,9 +1,6 @@
 package co.simplon;
 
-
 import java.util.Scanner;
-
-
 
 public class Main {
 
@@ -12,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		boolean endOfProg = false;
-		
+
 		do {
 			String answer = null;
 			System.out.println("Voulez vous dessiner un arbre de noel ?");
@@ -55,25 +52,22 @@ public class Main {
 	}
 
 	public static String createStage(int largeStages, int stage) {
-		String result = "";
+
 		String writedCell = "#";
 		String emptyCell = " ";
-		String[] sentence = new String[largeStages];
-
-		for (int posX = 0; posX < ((largeStages - 1) / 2 - stage); posX++) {
-			sentence[posX] = emptyCell;
+		String sentence = "";
+		for (int i = 0; i < ((largeStages - 1) / 2 - stage); i++) {
+			sentence += emptyCell;
 		}
-		for (int posX = ((largeStages - 1) / 2 - stage); posX < ((largeStages - 1) / 2 + 1 + stage); posX++) {
-			sentence[posX] = writedCell;
+		for (int i = ((largeStages - 1) / 2 - stage); i < ((largeStages - 1) / 2 + 1 + stage); i++) {
+			sentence += writedCell;
 		}
-		for (int posX = ((largeStages - 1) / 2 + 1 + stage); posX < (largeStages); posX++) {
-			sentence[posX] = emptyCell;
+		for (int i = ((largeStages - 1) / 2 + 1 + stage); i < (largeStages); i++) {
+			sentence += emptyCell;
 		}
-		for (int s = 0; s < largeStages; s++) {
-			result += sentence[s];
-		}
-		return result;
+		return sentence;
 	}
+
 	public static String createWood(int largeStages, int stage) {
 		String result = "";
 		String writedCell = "#";
@@ -83,10 +77,10 @@ public class Main {
 		for (int posX = 0; posX < ((largeStages - 1) / 2 - 1); posX++) {
 			sentence[posX] = emptyCell;
 		}
-		for (int posX = ((largeStages - 1) / 2 - 1); posX < ((largeStages - 1) / 2 + 2 ); posX++) {
+		for (int posX = ((largeStages - 1) / 2 - 1); posX < ((largeStages - 1) / 2 + 2); posX++) {
 			sentence[posX] = writedCell;
 		}
-		for (int posX = ((largeStages - 1) / 2 + 2 ); posX < (largeStages); posX++) {
+		for (int posX = ((largeStages - 1) / 2 + 2); posX < (largeStages); posX++) {
 			sentence[posX] = emptyCell;
 		}
 		for (int s = 0; s < largeStages; s++) {
@@ -115,7 +109,7 @@ public class Main {
 			System.out.println(heightTree[j]);
 
 		}
-		for (int k = height; k < height+3; k++) {
+		for (int k = height; k < height + 3; k++) {
 			System.out.println(heightTree[k]);
 
 		}
