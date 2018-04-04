@@ -2,7 +2,7 @@ package co.simplon;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main  {
 
 	public static Scanner in = new Scanner(System.in);
 
